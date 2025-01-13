@@ -1,0 +1,95 @@
+
+						DOC - A:
+Components likely won't change
+"Supervisor reset chip"
+Remember caps test points etc.
+In class: Free samples are not worth it
+Daisy chain only works on low frequency
+Use Power LEDs
+Bus on power
+Minimize high frequency traces
+Keep decoupling caps close
+CPU pin A1 is the first to go to R(O/A)M A0
+Run R(O/A)M CE/CS separate to CPLD
+Power plane is a thing, but more difficult (Can have capacitance)
+Use recommended parts
+Check parts have clear PCB footprints
+Typos are very possible
+Use sockets (eg zip) - 3M are high-quality
+Use DIP and PLCC over SMD
+Test pins should be > 1cm long
+Clock must be within CPU rate
+Resistors or CPLD for unused CPU inputs (eg 4.7kOhm)
+Resistors not needed for output/power pins
+10uF cap for power supply input/output
+1uF/0.1uF capf or bypass cap on chips. (One input with power pin on chip and other input should be ground)
+Can research cap values
+Reset circuit for CPU, not DUART
+
+Common mistakes:
+	halt/reset lines should be high volt until button is pressed
+	square chips flipped/rotated
+	solder continuity
+	Test pin spacing too small
+	Some PLCC datasheet numbering is incorrect
+	LEDs should be R/G with 330 Ohm resistors
+	See digikey/mouser
+	
+Schematic:
+	Address, data, power are most chips that need to be wired together between chips. All else needs to be separate (some exceptions)
+	CPLD does not need data bus
+	check clock is attacked to cpld
+	Test pins for clock, halt/reset, address bus, function code, address/data strobes, DTACK*, BERR*, etc.
+	Use all pins on CPLD to permit software fixes
+	DOUBLE CHECK SCHEMATICS TO DATASHEETS.
+	When checking address bus, ensure AS is low
+	Do not forget pins routed to CPLD to be set high/low (eg interrupt controls)
+	Set logic on ram chips so processor doesn't accidently write to it.
+	implement LDS/UDS
+
+PCB:
+	READ DATASHEETS (Often recommended land pattern)
+	study/practice pinnouts before starting
+	CPLD & MPU likely in middle of board
+	Be careful with PLCC pinnouts. DONT ASSUME
+	check pin sizes (especially with ZIF sockets and TO parts like voltage regulators)
+	Check orrientation, especially DSUB
+	Recommend 2 layer, < 60 in^2
+
+Programming:
+	Easy68k does not do word/byte mores correctly
+	use input/output routines from monitor program in book (may need modifying)
+	S-Records are easier with byte writes to RAM (only possible if  CS/CE of RAM is connected separately)
+
+CHECK COMMON MISTAKES AND FAQ
+	Stack work, chip addressing, monitor program, DUART
+	EEPROM/S-RAM OE pin, DUART/UART control/communication, BERR use, buses, GSR, Supervisors ship, max 232/233, cap bias, 
+	
+	Family of CPU/CPLD/UART is good enough, check op voltage of chip, Resistors: LED, pullup/down, voltage reg, Capacitors: Vin decoupling, voltage reg, RS232 specification
+	
+						DOC - B:
+What to do after board is built (Code/Troubleshooting/Examples)
+
+Make sure ground plane is near signals
+
+						DOC - C:
+How to write the monitor
+
+						Doc - D:
+Weekly report example
+
+						Doc - E:
+Example project spreadsheet organizer
+
+						Doc - F:
+Installing Xilinx and programming the CPLD
+
+						Syllabus
+	References list
+	"Single-board" computer must have: separte memory and I/O chips, an RS-232 compatible dataport > 19200 baud (or usb), 8-bit bi-directional data port with handshaking capability, 64k of RAM, 64k addressing, monitor program contained in eprom/eeprom/non-volitile memory.
+	Monitor must have: Examining contents of any memory location, changing contents of any memory location
+	MPU: transmit/receive from all data ports, Allow machine coded program to be loaded into RAM from data port, executing RAM program
+	Monitor must be commented adequately
+	All reports must be type written. Drawings of engineering quality (Use CAD), reports must have title page?
+	Will need to have price list, block diagram, chip selections, software description, memory mapping, detailed code description, flowchart, monitor source, troubleshooting
+	

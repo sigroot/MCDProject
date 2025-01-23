@@ -57,7 +57,7 @@ PCB:
 	Recommend 2 layer, < 60 in^2
 
 Programming:
-	Easy68k does not do word/byte mores correctly
+	Easy68k does not do word/byte movtes correctly
 	use input/output routines from monitor program in book (may need modifying)
 	S-Records are easier with byte writes to RAM (only possible if  CS/CE of RAM is connected separately)
 
@@ -92,4 +92,72 @@ Installing Xilinx and programming the CPLD
 	Monitor must be commented adequately
 	All reports must be type written. Drawings of engineering quality (Use CAD), reports must have title page?
 	Will need to have price list, block diagram, chip selections, software description, memory mapping, detailed code description, flowchart, monitor source, troubleshooting
-	
+
+
+						Textbook
+Can access 8M words (separated into bytes with UDS/LDS)
+
+
+						Web
+Interfaces have a critical trace length that can't be passed
+Some interfaces need impedance control
+Propagation speed is 6.8 in/ns
+	- max trace length is usually prop. speed * rise time / 10 (is conservative, can generally use 4 before worrying about impedance).
+USB (and others) can be routed as: length-matched single ended traces; tightly coupled differential pairs
+	- Trace width needed in a differential pair does not have to be equal to the trace width needed to hit the characteristic impedance for a single trace. In a differential pair, the 
+single-ended trace width defines the odd-mode impedance which is half your differential impedance target the odd-mode impedance value is different from the characteristic impedance value.
+	- Characteristic impedance (surge impedance Z0): ratio of amplitudes of voltage and current of a wave traveling in one direction along the line in the absence of reflections in the other direction; Input impedance when length is infinite
+		- input impedance: impedance of a network from an input
+	- Odd mode: lines have opposing voltage
+Place aground plane on the bottom layer, then digital components and routing on the top layer (helps with noise and gives easy ground access, not with impedance control)
+Use fixed trace width for power and signals (8-10 mil for signals, 12-14 for signal transitions back to ground, power with polygons or wider traces)
+Use decoupling/bypass capacitors to ensure stable power and low ground bounce
+LENGTH OF LINE DETERMINES REQUIRED IMPEDANCE MATCHING.
+
+
+						Book
+"Because the basic CMOS cell is composed of two complementary transistors, a virtual
+semiconductor controlled rectifier (SCR) may be formed when an input exceeds the
+supply voltage. The SCR that is formed by this high input causes the device to become
+latched in a mode that may result in excessive current drain and eventual destruction of
+the device. Although the MC68HC000 and MC68EC000 is implemented with input
+protection diodes, care should be exercised to ensure that the maximum input voltage
+specification is not exceeded. Some systems may require that the CMOS circuitry be
+isolated from voltage transients; other may require additional circuitry." (pg 10-5)
+
+
+
+						Parts List
+CPU - MC68HC__
+Power Supply -
+RAM - 
+ROM - 
+Clock - 
+Serial - 
+Sockets - 
+
+CPLD - 
+JTAG - 
+
+
+
+						Bibliography
+www.digikey.com
+https://www.youtube.com/watch?v=0LSG5uIdqJc
+resources.altium.com
+https://www.microwaves101.com/encyclopedias/even-and-odd-mode-impedances
+https://blog.clevercompliance.io/electrical-product-compliance/what-is-emc-testing/
+https://www.pcbasic.com/blog/power_supply_pcb.html
+https://ww1.microchip.com/downloads/aemDocuments/documents/VOP/ApplicationNotes/ApplicationNotes/Signal+Types+and+Terminations.pdf
+https://www.reddit.com/r/AskElectronics/comments/15q1bvo/how_well_regulated_is_usb_will_the_supply_voltage/
+https://www.ti.com/lit/an/slyt118/slyt118.pdf
+https://stackoverflow.com/questions/12678698/emulating-uart-over-usb
+https://www.circuitbread.com/tutorials/communicating-with-a-pc-using-uart---part-11-microcontroller-basics-pic10f200
+https://www.nextpcb.com/blog/spi-i2c-uart
+https://electronics.stackexchange.com/questions/110478/difference-between-uart-and-rs-232
+https://madpcb.com/glossary/
+https://resources.altium.com/p/copper-pour-and-stitching-do-you-need-them-pcb-layout
+https://www.altium.com/documentation/altium-designer/via-stitching-via-shielding-pcb#modifying-a-user-defined-via-stitching-area
+https://www.analog.com/en/resources/technical-articles/successful-pcb-grounding-with-mixedsignal-chips--follow-the-path-of-least-impedance.htmlhttps://www.eurocircuits.com/pcb-design-guidelines/#copperlayers
+
+

@@ -1,4 +1,4 @@
-24479166156891378
+24480904270593895
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -54662,6 +54662,13 @@ PLCC LCC
 0
 44
 44
+CustomComponents
+Pad-1_30x30mm
+
+
+0
+1
+1
 CustomComponents
 TO_11B1-RK-TP_3MM
 

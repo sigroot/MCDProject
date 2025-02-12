@@ -1,0 +1,69 @@
+Modified 02/12/2025
+
+In addition to the following 'A' sections containing the text "Updated", my corrections also involved rearranging the CPLD pins.
+
+        PENNED SHEET
+
+C: See pg 24 of FT240x datasheet for exact value
+A: Values appear to be linked on page 22. I found their part does have a different ohmage. Updated.
+
+C: Tying both channels together may cause issues
+A: Online resources claim that USB differential lines are already tied together, I wanted to ensure that they were. 
+
+C: Missing R1 and R2 to control what output voltage, see section 9.2.2.1 in datasheet!!!
+A: The resistors are for the adjustable voltage version which I am not using. The fixed voltage version is as written.
+
+C: This chip (TPS6307) is going to be very difficult to solder
+A: JLCPCB has the chip available for assembly, I shouldn't need to solder it and am willing to pay the bit extra for superfluous boards.
+
+C: Pull Resistors before LED
+A: Updated.
+
+C: Recommend connecting RESET line (of FT240x) to the CPLD reset
+A: Updated
+
+C: Double check if the dbus is outputing 3v3, make sure to add pull up resistors.
+A: The FT240x claims to output 3V3. According to the 68k datasheet, the minimum of 2V4 is still considered high voltage. 
+
+C: Button Debounce
+A: Updated.
+
+C: All CPU signals need 5V pull-up resistors
+A: The the footprint there, but some pins (e.g. Halt) I'm unsure of.
+
+C: A21-23 have a chance to show strange behavior, I would recommend not using all of the address lines on the rom and using A19 and A20 or lower for address decoding
+A: Updated
+
+C: Would be useful to add abus and dbus test point header
+A:
+
+C: D[0..~~16~~ --> 15]
+A: Updated
+
+        NOTES
+
+C: I see that you have the CPU, CPLD, and ROM sockets as separate components in your schematic. This is not necessary as we will set the actual components in the schematic to have the PCB footprint of the sockets.
+A: I set the footprints of the actual chips to be the socket footprints and included the sockets in the schematic purely for BOM. They have no impact otherwise.
+
+C: Because you are using the USB straight to parallel chip (FTDI), you will need to have a way for the cpu to read whether there is data available on the FTDI chip (unless you solely rely on interrupts). You essentially need to decode a ceratin address using the CPLD, and when that address is called (by the cpu), you should output the data availability state on the data bus. Just using D0 could work, as the cpu only needs to check one bit as true or false.
+Essentially what I am recommending is that you route D0 to your CPLD so you can use it later.
+A: I did want to try interrupts, but having a way to poll would be a good fallback. Updated.
+
+C: If you want to save pins on your CPLD, you can put the CPU function codes to a pin header (FC0, FC1, FC2). Also, the function codes should not be pulled high.
+A: I don't think I will need the pins. Updated
+
+C: CPU_AS coming into the CPLD should not be pulled up since it is an input into the CPLD.
+Same for CPU_R/W.
+A: Updated.
+
+C: In theory your current setup should work, but in a perfect world CPU_UDS and CPU_LDS would be routed into the CPLD to be able to individually enable the upper and lower rom. I think you could get away without it though. In this case, you could have the same control lines for both rom chips.
+A: I noticed that while editing the PCB and wanted to update it anyways. Easily Updated.
+
+C: I don't think it is necessary to have the CPLD control the clock enable pin. You could leave it permanently enabled.
+A: It seemed like a good thing to have just in case, but I needed the pin. Updated.
+
+C: Consider a reset supervisor or debouncer chip for the reset button.
+A: Updated.
+
+C: CPU_HALT and CPU_RST LEDs are going to stay on most of the time since those signals are active low.
+A: It is cheap enough to have what is essentially reset debug LEDs

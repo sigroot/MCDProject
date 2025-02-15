@@ -24113,7 +24113,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-commercial-products/G800W302018EU/17069165"
 			(at 262.89 151.13 0)
 			(effects
 				(font
@@ -25220,7 +25220,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/adam-tech/PH1-10-UA/9830653?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPZQDaIALGGABxwDsIAuoQA4AuUIAyuwE4BLAHYBzEAF9CNGohApIGHAWJkQMAMxwaMZm06Qe-YWMkg4ABlnzFeQiUjlNMGAFZdIDl16DREwmHh1KzQsWxUHEHUwODgAJgQWD31DHxN-egtghVDle3IGWJ1EzwNvYz9wLQRoORClO1VLJlNY81iIGuschoiqehoXBL0vI19TAFoZTrqwvJBWl0ZmwnGdach%2BAFdc1SDlkHHYrK2diLd98erkKBOe8ghm8XEgA"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-fci/10129378-910002BLF/7915958"
 			(at 180.34 105.41 0)
 			(effects
 				(font
@@ -27640,7 +27640,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/adam-tech/ADT-AMP1251106S4BS165A1/9832042"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-commercial-products/G800W302018EU/17069165"
 			(at 290.83 109.22 0)
 			(effects
 				(font
@@ -28488,6 +28488,7 @@
 	(symbol
 		(lib_id "Device:R")
 		(at 208.28 191.77 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -28495,7 +28496,7 @@
 		(dnp yes)
 		(uuid "78c94e19-52b8-4e30-be06-35fec8606d56")
 		(property "Reference" "R20"
-			(at 208.026 195.326 0)
+			(at 208.534 195.326 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28511,7 +28512,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 206.502 191.77 90)
+			(at 210.058 191.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31389,7 +31390,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "TPS630701RNMT"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/TPS630701RNMT/6193742"
 			(at 148.59 48.26 0)
 			(effects
 				(font
@@ -31499,7 +31500,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-commercial-products/G800W302018EU/17069165"
 			(at 224.79 151.13 0)
 			(effects
 				(font

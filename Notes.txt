@@ -125,39 +125,3 @@ protection diodes, care should be exercised to ensure that the maximum input vol
 specification is not exceeded. Some systems may require that the CMOS circuitry be
 isolated from voltage transients; other may require additional circuitry." (pg 10-5)
 
-
-
-						Parts List
-CPU - MC68HC__
-Power Supply -
-RAM - 
-ROM - 
-Clock - 
-Serial - 
-Sockets - 
-
-CPLD - 
-JTAG - 
-
-
-
-						Bibliography
-www.digikey.com
-https://www.youtube.com/watch?v=0LSG5uIdqJc
-resources.altium.com
-https://www.microwaves101.com/encyclopedias/even-and-odd-mode-impedances
-https://blog.clevercompliance.io/electrical-product-compliance/what-is-emc-testing/
-https://www.pcbasic.com/blog/power_supply_pcb.html
-https://ww1.microchip.com/downloads/aemDocuments/documents/VOP/ApplicationNotes/ApplicationNotes/Signal+Types+and+Terminations.pdf
-https://www.reddit.com/r/AskElectronics/comments/15q1bvo/how_well_regulated_is_usb_will_the_supply_voltage/
-https://www.ti.com/lit/an/slyt118/slyt118.pdf
-https://stackoverflow.com/questions/12678698/emulating-uart-over-usb
-https://www.circuitbread.com/tutorials/communicating-with-a-pc-using-uart---part-11-microcontroller-basics-pic10f200
-https://www.nextpcb.com/blog/spi-i2c-uart
-https://electronics.stackexchange.com/questions/110478/difference-between-uart-and-rs-232
-https://madpcb.com/glossary/
-https://resources.altium.com/p/copper-pour-and-stitching-do-you-need-them-pcb-layout
-https://www.altium.com/documentation/altium-designer/via-stitching-via-shielding-pcb#modifying-a-user-defined-via-stitching-area
-https://www.analog.com/en/resources/technical-articles/successful-pcb-grounding-with-mixedsignal-chips--follow-the-path-of-least-impedance.htmlhttps://www.eurocircuits.com/pcb-design-guidelines/#copperlayers
-
-

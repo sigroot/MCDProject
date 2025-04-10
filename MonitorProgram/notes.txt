@@ -1,0 +1,100 @@
+Useful commands:
+    objdump
+        -h gives sections in obj.o file
+        -t gives symbols (or see nm)
+
+    Description of linker scripts at sourceware.org/binutils/docs/ld
+
+linker scripts are series of commands
+double quote to escape
+comments use '/*' and '*/'
+'SECTIONS' is necessary
+    SECTIONS
+    {
+        . = 0x10000;            /* Set location counter ('.') to 0x10000 (was 0) */
+        .text : { *(.text) }    /* Define .text section at location counter, place all .text input sections at .text output section */
+        . = 0x8000000;
+        .data : { *(.data) }
+        .bss : { *(.bss) }      /* Place .bss after .data
+    }                           /* .text is code, .data is initialized data, .bss is uninitialized data */
+                                /* location counter is incremented by section size */
+
+ENTRY(main.c)       /* Sets first instruction to execute at main.c (see also -e flag)
+INCLUDE file        /* Includes linker script 'file' */
+    -L adds directories to search for this
+
+INPUT(file1, file2, ...)        /* Include files when linking (INPUT (-lfile) turns to libfile.a)
+OUTPUT(file)        /* Set name of output file */
+SEARCH_DIR(path)    /* Add path to list for searching for active libraries */
+STARTUP(file)       /* INPUT, but makes 'file' first to be linked */
+
+OUTPUT_FORMAT(bfdname)      /* Names bfd format of output file (here m68000) */
+    see -oformat bfdname
+    up to 3 arguments for if the user specifieds edianness with -EL or -EB
+TARGET(bfdname)     /* Set bfd format for input files
+    see -b bfdname
+
+REGION_ALIAS(alias, region)     /* Defer any call to alias to region */
+MEMORY
+{
+    ROM : ORIGIN = 0, LENGTH = 3M
+    RAM : ORIGIN = 0x10000000, LENGTH = 1M
+}
+can set variables with text = value;
+
+ASSERT(exp, message)    /* Ensure exp is non-zero or crash with mesage */
+EXTERN(symbol symbol ...)       /* Force symbol to be intered in output as undefined symbol (trigger aditional modules) */
+    see -u
+FORCE_COMMON_ALLOCATION         /* make ld assign space to common symbols even if a relocatable output is specified with -r */
+    see -d
+INHIBIT_COMMON_ALLOCATION       /* make ld omit assignment of address to common symbols even for -r file */
+    see --no-define-common
+FORCE_GROUP_ALLOCATION          /* make ld place section group members like normal input sections and delete groups even if -r file is specified */
+    see --force-group-allocation
+INSERT [AFTER | BEFORE] output_selection    /* augment default sections */
+NOCROSSREFS(section section ...)        /* issue error if references between output sections */
+OUTPUT_ARCH(bfdarch)                    /* Specify output machine architecture in BFD */
+    See arch of object file with -f
+LD_FEATURE(string)      /* Modify ld behavior */
+
+for 68k, --got=type can specify GOT generation scheme of 'single', 'negative', 'multigot', or 'target'
+
+symbol assignment can use any of C assignment operators
+HIDDEN(symbol = expression)     /* defines symbol that wont be exported */
+PROVIDE(symbol = expression)    /* defines symbol if it isn't already defined */
+PROVIDE_HIDDEN
+
+Note: symbol names in C may be mangled when stored on symbol table
+defining a symbol in the linker script as a number defines the address of that symbol
+    DONT attempt to use contents of symbol. Do that kind of think in source code.
+
+Input sections are a file name optionally followed by section names
+
+Can include explicit bytes of data in an output section by using BYTE (1), SHORT (2), LONG (4), or SQUAD (8) (increments location counter)
+ASCIZ "string" stores 'string at current value of location counter plus zero byte. Includes \n, \r, \t, and octal (not hexadecimal).
+    Must be within section description (part that determines values of output section
+FILL(0x90909090)
+
+Output section address is determined by 1) next free address in set output memory region 2) MEMORY Command 3) location counter
+    output_section address : { files(input_section) }
+    ALIGN(value) returns location counter aligned up to value
+
+MEMORY                      /* describes location and size of all blocks of memory */
+{
+    name [(attr)] : ORIGIN = origin, LENGTH = len
+    ...
+    rom (rx)    : ORIGIN = 0, LENGTH = 256K
+    ram (!rx)   : o = 0x40000000, l = 4M
+}
+name: linker script name (can be aliased, no duplicates)
+attr: R,W,X,A(llocatable),I(nitialized),!(Invert following)
+origin: start of memory, can be 'org' or 'o' for short
+len: size of memory region, can be 'len' or 'l'
+
+PHDRS                       /* Program headers or 'segments' used in ELF object files */
+    Determine how to run program on native ELF system
+    Only applies when making ELF output file
+
+VERSION                     /* Gives symbols versions to reference specific versions */
+
+

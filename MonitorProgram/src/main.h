@@ -32,13 +32,13 @@ int print_str(char* pstr) {
 // Print a string followed by a newline
 int print_nl(char* pstr) {
     print_str(pstr);
-    print_str("\n\r\0");
+    print_str("\n\r");
     return 0;
 }
 
 // Print a newline
 int p_nl() {
-    print_str("\n\r\0");
+    print_str("\n\r");
     return 0;
 }
 
@@ -78,8 +78,26 @@ int print_long (uint32_t plong) {
 
 // Block until character recieved from usb
 char b_poll() {
-    while ((*poll & 0x01) != 0);
+    while ((*poll) != 0);
     return *utp;
+}
+
+
+//          ***
+//      Conversion functions
+//          ***
+
+uint32_t shtod(char* input) {
+    uint32_t output = 0;
+    for (int i = 0; input[i] != '\0'; i++) {
+        output <<= 4;
+        if (input[i] >= 0x30 && input[i] <= 0x39) {
+            output += input[i] & 0x0F;
+        } else if ((input[i] >= 0x41 && input[i] <= 0x46) || (input[i] >= 0x61 && input[i] <= 0x66)) {
+            output += (input[i] & 0x0F) + 9;
+        }
+    }
+    return output;
 }
 
 //          ***
@@ -107,8 +125,8 @@ char* main_menu = "\
          * ReadR [register]         - Read the value in [register]              \r\n\
          * WritR [register] [value] - Write [value] to [register]               \r\n\
          * LSRec                    - Load input S-Record until stop code       \r\n\
-         * Run   [address]          - Begin running the code at [address]       \r\n\
+         * RunSR [address]          - Begin running the code at [address]       \r\n\
                                                                                 \r\n\
                                                                                 \r\n\
                                                                                 \r\n\
- :> \0";
+ :> ";

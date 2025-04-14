@@ -14,6 +14,10 @@
 #include "addr.h"
 #endif
 
+#ifndef monitor_h
+#include "monitor.h"
+#endif
+
 extern uint32_t start_text;
 extern uint32_t end_text;
 extern uint32_t start_rodata;
@@ -38,25 +42,7 @@ int main() {
     }
     // Now stored variables work (eg. addr.h, strings, etc.)
 
-    char input;
-    uint8_t buffer_len = 20;
-    char buffer[20];
-    for(int i = 0; i < buffer_len; i++) {
-        buffer[i] = '\0';
-    }
-    uint8_t buff_tail = 0;
-    while(1){
-        print_str(main_menu);
-        print_str(buffer);
-        input = b_poll();
-        buffer[buff_tail] = input; 
-        buff_tail += 1;
-        if (buff_tail >= 20) {
-            buff_tail -= 1;
-        }
-    }
-
-
+    interface();
 
     return 0;
 }

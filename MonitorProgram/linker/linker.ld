@@ -5,8 +5,6 @@ OUTPUT_FORMAT(srec)
 MEMORY {
     ROM (rx)    : o = 0x00000000, l = 524288
     RAM (rwx)   : o = 0x00080000, l = 131072
-    /*UTP (w)     : o = 0x00100001, l = 1
-    POLL (r)    : o = 0x00180001, l = 1*/
 }
 
 SECTIONS
@@ -53,17 +51,4 @@ SECTIONS
         *(.bss)
         end_bss = .;
     } > RAM
-
-
-    /*
-    .utp :  
-    {
-        utp = .;
-    } > UTP
-    
-    .poll :
-    {
-        poll = .;
-    } > POLL
-    */
 }

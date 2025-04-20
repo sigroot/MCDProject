@@ -1,0 +1,9 @@
+V3 4
+FL C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.vhd 2025/02/20.15:13:19 P.20131013
+FL D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.vhd 2025/03/30.14:46:32 P.20131013
+EN work/main 1743363993 \
+      FL D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/main/Behavioral 1743363994 \
+      FL D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.vhd \
+      EN work/main 1743363993

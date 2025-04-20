@@ -1,0 +1,419 @@
+MDF Database:  version 1.0
+MDF_INFO | main | XC9572XL-7-PC44
+MACROCELL | 1 | 8 | UTP_RXF_IBUF$BUF0
+ATTRIBUTES | 265986 | 0
+INPUTS | 3 | UTP_RXF  | CPU_LDS  | RC_PS<0>
+INPUTMC | 1 | 3 | 9
+INPUTP | 2 | 88 | 11
+EQ | 2 | 
+   D0 = UTP_RXF;
+   D0.OE = !CPU_LDS & RC_PS<0>;
+
+MACROCELL | 3 | 12 | HI_PS<0>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 12 | 2 | 8 | 1 | 13 | 1 | 16 | 1 | 10 | 1 | 14 | 1 | 5 | 0 | 17 | 0 | 15 | 1 | 15 | 1 | 4 | 1 | 6 | 1 | 17
+INPUTS | 1 | HI_NS<0>
+INPUTMC | 1 | 3 | 17
+EQ | 2 | 
+   HI_PS<0>.D = HI_NS<0>;
+   HI_PS<0>.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 3 | 11 | HI_PS<1>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 12 | 2 | 8 | 1 | 13 | 1 | 16 | 1 | 10 | 1 | 14 | 1 | 5 | 0 | 17 | 0 | 15 | 1 | 15 | 1 | 4 | 1 | 6 | 1 | 17
+INPUTS | 1 | HI_NS<1>
+INPUTMC | 1 | 3 | 16
+EQ | 2 | 
+   HI_PS<1>.D = HI_NS<1>;
+   HI_PS<1>.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 3 | 9 | RC_PS<0>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 3 | 1 | 8 | 1 | 12 | 0 | 16
+INPUTS | 1 | RC_NS<0>
+INPUTMC | 1 | 1 | 12
+EQ | 2 | 
+   RC_PS<0>.D = RC_NS<0>;
+   RC_PS<0>.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 3 | 8 | RD_PS<0>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 3 | 3 | 15 | 3 | 10 | 0 | 16
+INPUTS | 1 | RD_NS<0>
+INPUTMC | 1 | 3 | 15
+EQ | 2 | 
+   RD_PS<0>.D = RD_NS<0>;
+   RD_PS<0>.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 16 | WC_PS<1>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 7 | 1 | 11 | 3 | 14 | 3 | 7 | 0 | 17 | 1 | 15 | 1 | 9 | 1 | 17
+INPUTS | 1 | WC_NS<1>
+INPUTMC | 1 | 3 | 14
+EQ | 2 | 
+   WC_PS<1>.D = WC_NS<1>;
+   WC_PS<1>.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 17 | WC_PS<0>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 7 | 1 | 11 | 3 | 14 | 3 | 7 | 0 | 17 | 1 | 15 | 1 | 9 | 1 | 17
+INPUTS | 1 | WC_NS<0>
+INPUTMC | 1 | 1 | 11
+EQ | 2 | 
+   WC_PS<0>.D = WC_NS<0>;
+   WC_PS<0>.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 3 | 17 | HI_NS<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 2 | HI_NS<0>/HI_NS<0>_SETF  | HI_NS<0>/HI_NS<0>_RSTF
+INPUTMC | 2 | 1 | 5 | 0 | 17
+EQ | 4 | 
+   HI_NS<0>.D = Gnd;
+   HI_NS<0>.CLK = Gnd;
+   HI_NS<0>.AP = HI_NS<0>/HI_NS<0>_SETF;
+   HI_NS<0>.AR = HI_NS<0>/HI_NS<0>_RSTF;
+
+MACROCELL | 3 | 16 | HI_NS<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 11
+INPUTS | 2 | HI_NS<1>/HI_NS<1>_SETF  | HI_NS<1>/HI_NS<1>_RSTF
+INPUTMC | 2 | 0 | 15 | 1 | 15
+EQ | 4 | 
+   HI_NS<1>.D = Gnd;
+   HI_NS<1>.CLK = Gnd;
+   HI_NS<1>.AP = HI_NS<1>/HI_NS<1>_SETF;
+   HI_NS<1>.AR = HI_NS<1>/HI_NS<1>_RSTF;
+
+MACROCELL | 1 | 12 | RC_NS<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 9
+INPUTS | 7 | CPU_LDS  | CPU_R_W  | CPU_AS  | A<20>  | A<19>  | RC_PS<0>  | $OpTx$$OpTx$FX_DC$3_INV$138
+INPUTMC | 2 | 3 | 9 | 1 | 4
+INPUTP | 5 | 11 | 89 | 29 | 63 | 62
+EQ | 5 | 
+   RC_NS<0>.D = Gnd;
+   RC_NS<0>.CLK = Gnd;
+   RC_NS<0>.AP = !CPU_LDS & CPU_R_W & !CPU_AS & A<20> & A<19> & 
+	!RC_PS<0> & !$OpTx$$OpTx$FX_DC$3_INV$138;
+   RC_NS<0>.AR = CPU_LDS & RC_PS<0>;
+
+MACROCELL | 3 | 15 | RD_NS<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 8
+INPUTS | 4 | UTP_RXF  | RD_PS<0>  | $OpTx$FX_DC$6  | CPU_LDS
+INPUTMC | 2 | 3 | 8 | 1 | 6
+INPUTP | 2 | 88 | 11
+EQ | 4 | 
+   RD_NS<0>.D = Gnd;
+   RD_NS<0>.CLK = Gnd;
+   RD_NS<0>.AP = !UTP_RXF & !RD_PS<0> & $OpTx$FX_DC$6;
+   RD_NS<0>.AR = CPU_LDS & RD_PS<0>;
+
+MACROCELL | 1 | 11 | WC_NS<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 10 | CPU_LDS  | CPU_R_W  | CPU_AS  | A<20>  | A<19>  | UTP_TXE  | WC_PS<1>  | WC_PS<0>  | $OpTx$$OpTx$FX_DC$3_INV$138  | WC_NS<0>/WC_NS<0>_RSTF__$INT
+INPUTMC | 4 | 2 | 16 | 2 | 17 | 1 | 4 | 1 | 9
+INPUTP | 6 | 11 | 89 | 29 | 63 | 62 | 87
+EQ | 6 | 
+   WC_NS<0>.D = Gnd;
+   WC_NS<0>.CLK = Gnd;
+   WC_NS<0>.AP = !CPU_LDS & !CPU_R_W & !CPU_AS & A<20> & !A<19> & 
+	!UTP_TXE & !WC_PS<1> & !WC_PS<0> & 
+	!$OpTx$$OpTx$FX_DC$3_INV$138;
+   WC_NS<0>.AR = !WC_NS<0>/WC_NS<0>_RSTF__$INT;
+
+MACROCELL | 3 | 14 | WC_NS<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 4 | WC_PS<1>  | WC_PS<0>  | $OpTx$$OpTx$FX_DC$5_INV$139  | WC_NS<1>/WC_NS<1>_RSTF
+INPUTMC | 4 | 2 | 16 | 2 | 17 | 1 | 3 | 1 | 17
+EQ | 5 | 
+   WC_NS<1>.D = Gnd;
+   WC_NS<1>.CLK = Gnd;
+   WC_NS<1>.AP = !WC_PS<1> & WC_PS<0> & 
+	!$OpTx$$OpTx$FX_DC$5_INV$139;
+   WC_NS<1>.AR = WC_NS<1>/WC_NS<1>_RSTF;
+
+MACROCELL | 2 | 8 | CPU_IPL0_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 2 | HI_PS<0>  | HI_PS<1>
+INPUTMC | 2 | 3 | 12 | 3 | 11
+EQ | 2 | 
+   !CPU_IPL0 = HI_PS<0>
+	$ HI_PS<1>;
+
+MACROCELL | 3 | 10 | UTP_RD_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 2 | CPU_LDS  | RD_PS<0>
+INPUTMC | 1 | 3 | 8
+INPUTP | 1 | 11
+EQ | 1 | 
+   !UTP_RD = !CPU_LDS & RD_PS<0>;
+
+MACROCELL | 0 | 16 | CPU_DTACK_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | CPU_LDS  | CPU_AS  | RC_PS<0>  | RD_PS<0>
+INPUTMC | 2 | 3 | 9 | 3 | 8
+INPUTP | 2 | 11 | 29
+EQ | 2 | 
+   CPU_DTACK = CPU_LDS & CPU_AS
+	# CPU_AS & !RC_PS<0> & !RD_PS<0>;
+
+MACROCELL | 0 | 7 | N0
+ATTRIBUTES | 265986 | 0
+INPUTS | 1 | CPU_R_W
+INPUTP | 1 | 89
+EQ | 2 | 
+   RAM_WE = Gnd;
+   RAM_WE.OE = !CPU_R_W;
+
+MACROCELL | 0 | 5 | N0$BUF0
+ATTRIBUTES | 265986 | 0
+INPUTS | 4 | CPU_AS  | A<20>  | A<19>  | $OpTx$$OpTx$FX_DC$3_INV$138
+INPUTMC | 1 | 1 | 4
+INPUTP | 3 | 29 | 63 | 62
+EQ | 3 | 
+   RAM_OE = Gnd;
+   RAM_OE.OE = !CPU_AS & !A<20> & A<19> & 
+	!$OpTx$$OpTx$FX_DC$3_INV$138;
+
+MACROCELL | 0 | 8 | N0$BUF1
+ATTRIBUTES | 265986 | 0
+INPUTS | 4 | CPU_AS  | A<20>  | A<19>  | $OpTx$$OpTx$FX_DC$3_INV$138
+INPUTMC | 1 | 1 | 4
+INPUTP | 3 | 29 | 63 | 62
+EQ | 3 | 
+   RAM_CE = Gnd;
+   RAM_CE.OE = !CPU_AS & !A<20> & A<19> & 
+	!$OpTx$$OpTx$FX_DC$3_INV$138;
+
+MACROCELL | 2 | 13 | CPU_RST_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | R_BTN
+INPUTP | 1 | 24
+EQ | 1 | 
+   CPU_RST = R_BTN;
+
+MACROCELL | 2 | 10 | CPU_RST_OBUF$BUF1
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | R_BTN
+INPUTP | 1 | 24
+EQ | 1 | 
+   CPU_HALT = R_BTN;
+
+MACROCELL | 1 | 13 | ROM_0_OE_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 7 | CPU_R_W  | CPU_UDS  | CPU_AS  | A<20>  | A<19>  | HI_PS<0>  | HI_PS<1>
+INPUTMC | 2 | 3 | 12 | 3 | 11
+INPUTP | 5 | 89 | 12 | 29 | 63 | 62
+EQ | 4 | 
+   !ROM_0_OE = CPU_R_W & !CPU_UDS & !CPU_AS & !A<20> & !A<19> & 
+	HI_PS<0>
+	# CPU_R_W & !CPU_UDS & !CPU_AS & !A<20> & !A<19> & 
+	!HI_PS<1>;
+
+MACROCELL | 1 | 16 | ROM_0_OE_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 7 | CPU_R_W  | CPU_UDS  | CPU_AS  | A<20>  | A<19>  | HI_PS<0>  | HI_PS<1>
+INPUTMC | 2 | 3 | 12 | 3 | 11
+INPUTP | 5 | 89 | 12 | 29 | 63 | 62
+EQ | 4 | 
+   !ROM_0_CE = CPU_R_W & !CPU_UDS & !CPU_AS & !A<20> & !A<19> & 
+	HI_PS<0>
+	# CPU_R_W & !CPU_UDS & !CPU_AS & !A<20> & !A<19> & 
+	!HI_PS<1>;
+
+MACROCELL | 1 | 10 | ROM_1_OE_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 7 | CPU_LDS  | CPU_R_W  | CPU_AS  | A<20>  | A<19>  | HI_PS<0>  | HI_PS<1>
+INPUTMC | 2 | 3 | 12 | 3 | 11
+INPUTP | 5 | 11 | 89 | 29 | 63 | 62
+EQ | 4 | 
+   !ROM_1_OE = !CPU_LDS & CPU_R_W & !CPU_AS & !A<20> & !A<19> & 
+	HI_PS<0>
+	# !CPU_LDS & CPU_R_W & !CPU_AS & !A<20> & !A<19> & 
+	!HI_PS<1>;
+
+MACROCELL | 1 | 14 | ROM_1_OE_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 7 | CPU_LDS  | CPU_R_W  | CPU_AS  | A<20>  | A<19>  | HI_PS<0>  | HI_PS<1>
+INPUTMC | 2 | 3 | 12 | 3 | 11
+INPUTP | 5 | 11 | 89 | 29 | 63 | 62
+EQ | 4 | 
+   !ROM_1_CE = !CPU_LDS & CPU_R_W & !CPU_AS & !A<20> & !A<19> & 
+	HI_PS<0>
+	# !CPU_LDS & CPU_R_W & !CPU_AS & !A<20> & !A<19> & 
+	!HI_PS<1>;
+
+MACROCELL | 3 | 7 | UTP_WR_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 2 | WC_PS<1>  | WC_PS<0>
+INPUTMC | 2 | 2 | 16 | 2 | 17
+EQ | 1 | 
+   !UTP_WR = !WC_PS<1> & WC_PS<0>;
+
+MACROCELL | 1 | 7 | C_EN_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   UTP_SIWU = Vcc;
+
+MACROCELL | 3 | 13 | C_EN_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   UTP_RST = Vcc;
+
+MACROCELL | 0 | 14 | C_EN_OBUF$BUF1
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   C_EN = Vcc;
+
+MACROCELL | 2 | 4 | C_EN_OBUF$BUF2
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   CPU_IPL2 = Vcc;
+
+MACROCELL | 2 | 7 | C_EN_OBUF$BUF3
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   CPU_IPL1 = Vcc;
+
+MACROCELL | 1 | 5 | HI_NS<0>/HI_NS<0>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 17
+INPUTS | 5 | UTP_RXF  | HI_PS<0>  | HI_PS<1>  | CPU_LDS  | CPU_AS
+INPUTMC | 2 | 3 | 12 | 3 | 11
+INPUTP | 3 | 88 | 11 | 29
+EQ | 2 | 
+   HI_NS<0>/HI_NS<0>_SETF = !UTP_RXF & !HI_PS<0> & !HI_PS<1>
+	# CPU_LDS & CPU_AS & !HI_PS<0> & HI_PS<1>;
+
+MACROCELL | 0 | 17 | HI_NS<0>/HI_NS<0>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 17
+INPUTS | 10 | HI_PS<0>  | HI_PS<1>  | R_BTN  | WC_PS<1>  | WC_PS<0>  | CPU_LDS  | CPU_AS  | CPU_FC2  | CPU_FC1  | CPU_FC0
+INPUTMC | 4 | 3 | 12 | 3 | 11 | 2 | 16 | 2 | 17
+INPUTP | 6 | 24 | 11 | 29 | 50 | 59 | 52
+EQ | 4 | 
+   HI_NS<0>/HI_NS<0>_RSTF = HI_PS<0> & HI_PS<1> & !R_BTN
+	# HI_PS<0> & HI_PS<1> & !WC_PS<1> & WC_PS<0>
+	# !CPU_LDS & !CPU_AS & HI_PS<0> & !HI_PS<1> & 
+	CPU_FC2 & CPU_FC1 & CPU_FC0;
+
+MACROCELL | 0 | 15 | HI_NS<1>/HI_NS<1>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 7 | CPU_LDS  | CPU_AS  | HI_PS<0>  | HI_PS<1>  | CPU_FC2  | CPU_FC1  | CPU_FC0
+INPUTMC | 2 | 3 | 12 | 3 | 11
+INPUTP | 5 | 11 | 29 | 50 | 59 | 52
+EQ | 3 | 
+   HI_NS<1>/HI_NS<1>_SETF = CPU_LDS & CPU_AS & !HI_PS<0> & HI_PS<1>
+	# !CPU_LDS & !CPU_AS & HI_PS<0> & !HI_PS<1> & 
+	CPU_FC2 & CPU_FC1 & CPU_FC0;
+
+MACROCELL | 1 | 15 | HI_NS<1>/HI_NS<1>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 6 | HI_PS<0>  | HI_PS<1>  | R_BTN  | UTP_RXF  | WC_PS<1>  | WC_PS<0>
+INPUTMC | 4 | 3 | 12 | 3 | 11 | 2 | 16 | 2 | 17
+INPUTP | 2 | 24 | 88
+EQ | 3 | 
+   HI_NS<1>/HI_NS<1>_RSTF = !UTP_RXF & !HI_PS<0> & !HI_PS<1>
+	# HI_PS<0> & HI_PS<1> & !R_BTN
+	# HI_PS<0> & HI_PS<1> & !WC_PS<1> & WC_PS<0>;
+
+MACROCELL | 1 | 4 | $OpTx$$OpTx$FX_DC$3_INV$138
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 1 | 12 | 1 | 11 | 0 | 5 | 0 | 8
+INPUTS | 2 | HI_PS<0>  | HI_PS<1>
+INPUTMC | 2 | 3 | 12 | 3 | 11
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$3_INV$138 = !HI_PS<0> & HI_PS<1>;
+
+MACROCELL | 1 | 6 | $OpTx$FX_DC$6
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 6 | HI_PS<0>  | HI_PS<1>  | CPU_R_W  | CPU_AS  | A<20>  | A<19>
+INPUTMC | 2 | 3 | 12 | 3 | 11
+INPUTP | 4 | 89 | 29 | 63 | 62
+EQ | 2 | 
+   $OpTx$FX_DC$6 = !HI_PS<0> & HI_PS<1>
+	# CPU_R_W & !CPU_AS & A<20> & !A<19>;
+
+MACROCELL | 1 | 9 | WC_NS<0>/WC_NS<0>_RSTF__$INT
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 1 | 11
+INPUTS | 4 | CPU_AS  | WC_PS<0>  | WC_PS<1>  | UTP_TXE
+INPUTMC | 2 | 2 | 17 | 2 | 16
+INPUTP | 2 | 29 | 87
+EQ | 3 | 
+   WC_NS<0>/WC_NS<0>_RSTF__$INT = !CPU_AS & !WC_PS<0>
+	# !WC_PS<1> & !WC_PS<0>
+	# !CPU_AS & !UTP_TXE & !WC_PS<1>;
+
+MACROCELL | 1 | 3 | $OpTx$$OpTx$FX_DC$5_INV$139
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 2 | CPU_AS  | UTP_TXE
+INPUTP | 2 | 29 | 87
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$5_INV$139 = !CPU_AS & !UTP_TXE;
+
+MACROCELL | 1 | 17 | WC_NS<1>/WC_NS<1>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 10 | WC_PS<1>  | WC_PS<0>  | CPU_AS  | CPU_LDS  | CPU_R_W  | A<20>  | A<19>  | UTP_TXE  | HI_PS<0>  | HI_PS<1>
+INPUTMC | 4 | 2 | 16 | 2 | 17 | 3 | 12 | 3 | 11
+INPUTP | 6 | 29 | 11 | 89 | 63 | 62 | 87
+EQ | 6 | 
+   WC_NS<1>/WC_NS<1>_RSTF = CPU_AS & WC_PS<1>
+	# WC_PS<1> & WC_PS<0>
+	# !CPU_LDS & !CPU_R_W & !CPU_AS & A<20> & !A<19> & 
+	!UTP_TXE & HI_PS<0> & !WC_PS<1> & !WC_PS<0>
+	# !CPU_LDS & !CPU_R_W & !CPU_AS & A<20> & !A<19> & 
+	!UTP_TXE & !HI_PS<1> & !WC_PS<1> & !WC_PS<0>;
+
+PIN | CPU_LDS | 64 | 0 | N/A | 11 | 12 | 1 | 8 | 1 | 12 | 3 | 15 | 1 | 11 | 3 | 10 | 0 | 16 | 1 | 10 | 1 | 14 | 1 | 5 | 0 | 17 | 0 | 15 | 1 | 17
+PIN | CPU_R_W | 64 | 0 | N/A | 89 | 9 | 1 | 12 | 1 | 11 | 0 | 7 | 1 | 13 | 1 | 16 | 1 | 10 | 1 | 14 | 1 | 6 | 1 | 17
+PIN | CPU_UDS | 64 | 0 | N/A | 12 | 2 | 1 | 13 | 1 | 16
+PIN | CPU_AS | 64 | 0 | N/A | 29 | 16 | 1 | 12 | 1 | 11 | 0 | 16 | 0 | 5 | 0 | 8 | 1 | 13 | 1 | 16 | 1 | 10 | 1 | 14 | 1 | 5 | 0 | 17 | 0 | 15 | 1 | 6 | 1 | 9 | 1 | 3 | 1 | 17
+PIN | A<20> | 64 | 0 | N/A | 63 | 10 | 1 | 12 | 1 | 11 | 0 | 5 | 0 | 8 | 1 | 13 | 1 | 16 | 1 | 10 | 1 | 14 | 1 | 6 | 1 | 17
+PIN | A<19> | 64 | 0 | N/A | 62 | 10 | 1 | 12 | 1 | 11 | 0 | 5 | 0 | 8 | 1 | 13 | 1 | 16 | 1 | 10 | 1 | 14 | 1 | 6 | 1 | 17
+PIN | UTP_RXF | 64 | 0 | N/A | 88 | 4 | 1 | 8 | 3 | 15 | 1 | 5 | 1 | 15
+PIN | UTP_TXE | 64 | 0 | N/A | 87 | 4 | 1 | 11 | 1 | 9 | 1 | 3 | 1 | 17
+PIN | CLK | 8192 | 0 | N/A | 21 | 6 | 3 | 12 | 3 | 11 | 3 | 9 | 3 | 8 | 2 | 16 | 2 | 17
+PIN | R_BTN | 64 | 0 | N/A | 24 | 4 | 2 | 13 | 2 | 10 | 0 | 17 | 1 | 15
+PIN | CPU_FC2 | 64 | 0 | N/A | 50 | 2 | 0 | 17 | 0 | 15
+PIN | CPU_FC1 | 64 | 0 | N/A | 59 | 2 | 0 | 17 | 0 | 15
+PIN | CPU_FC0 | 64 | 0 | N/A | 52 | 2 | 0 | 17 | 0 | 15
+PIN | D0 | 536871040 | 0 | N/A | 92
+PIN | CPU_IPL0 | 536871040 | 0 | N/A | 38
+PIN | UTP_RD | 536871040 | 0 | N/A | 68
+PIN | CPU_DTACK | 536871040 | 0 | N/A | 27
+PIN | RAM_WE | 536871040 | 0 | N/A | 15
+PIN | RAM_OE | 536871040 | 0 | N/A | 13
+PIN | RAM_CE | 536871040 | 0 | N/A | 20
+PIN | CPU_RST | 536871040 | 0 | N/A | 49
+PIN | CPU_HALT | 536871040 | 0 | N/A | 46
+PIN | ROM_0_OE | 536871040 | 0 | N/A | 7
+PIN | ROM_0_CE | 536871040 | 0 | N/A | 10
+PIN | ROM_1_OE | 536871040 | 0 | N/A | 3
+PIN | ROM_1_CE | 536871040 | 0 | N/A | 9
+PIN | UTP_WR | 536871040 | 0 | N/A | 65
+PIN | UTP_SIWU | 536871040 | 0 | N/A | 90
+PIN | UTP_RST | 536871040 | 0 | N/A | 72
+PIN | C_EN | 536871040 | 0 | N/A | 26
+PIN | CPU_IPL2 | 536871040 | 0 | N/A | 31
+PIN | CPU_IPL1 | 536871040 | 0 | N/A | 33

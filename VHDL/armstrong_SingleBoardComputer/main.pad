@@ -1,0 +1,73 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 3-30-2025  2:46PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  main.ngd
+output file: main.pad
+Part type:   xc9572xl
+Speed grade: -7
+Package:     pc44
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1|CPU_LDS|I|I/O|INPUT|||||||||
+P2|CPU_UDS|I|I/O|INPUT|||||||||
+P3|RAM_OE|O|I/O|OUTPUT|||||||||
+P4|RAM_WE|O|I/O|OUTPUT|||||||||
+P5|RAM_CE|O|I/O/GCK1|OUTPUT|||||||||
+P6|CLK|GCK|I/O/GCK2||||||||||
+P7|R_BTN|I|I/O/GCK3|INPUT|||||||||
+P8|C_EN|O|I/O|OUTPUT|||||||||
+P9|CPU_DTACK|O|I/O|OUTPUT|||||||||
+P10|GND||GND||||||||||
+P11|CPU_AS|I|I/O|INPUT|||||||||
+P12|CPU_IPL2|O|I/O|OUTPUT|||||||||
+P13|CPU_IPL1|O|I/O|OUTPUT|||||||||
+P14|CPU_IPL0|O|I/O|OUTPUT|||||||||
+P15|TDI||TDI||||||||||
+P16|TMS||TMS||||||||||
+P17|TCK||TCK||||||||||
+P18|CPU_HALT|O|I/O|OUTPUT|||||||||
+P19|CPU_RST|O|I/O|OUTPUT|||||||||
+P20|CPU_FC2|I|I/O|INPUT|||||||||
+P21|VCC||VCCINT||||||||||
+P22|CPU_FC0|I|I/O|INPUT|||||||||
+P23|GND||GND||||||||||
+P24|CPU_FC1|I|I/O|INPUT|||||||||
+P25|A<19>|I|I/O|INPUT|||||||||
+P26|A<20>|I|I/O|INPUT|||||||||
+P27|UTP_WR|O|I/O|OUTPUT|||||||||
+P28|UTP_RD|O|I/O|OUTPUT|||||||||
+P29|UTP_RST|O|I/O|OUTPUT|||||||||
+P30|TDO||TDO||||||||||
+P31|GND||GND||||||||||
+P32|VCC||VCCIO||||||||||
+P33|TIE||I/O||||||||||
+P34|TIE||I/O||||||||||
+P35|UTP_TXE|I|I/O|INPUT|||||||||
+P36|UTP_RXF|I|I/O|INPUT|||||||||
+P37|CPU_R_W|I|I/O|INPUT|||||||||
+P38|UTP_SIWU|O|I/O|OUTPUT|||||||||
+P39|D0|O|I/O/GSR|OUTPUT|||||||||
+P40|ROM_1_OE|O|I/O/GTS2|OUTPUT|||||||||
+P41|VCC||VCCINT||||||||||
+P42|ROM_0_OE|O|I/O/GTS1|OUTPUT|||||||||
+P43|ROM_1_CE|O|I/O|OUTPUT|||||||||
+P44|ROM_0_CE|O|I/O|OUTPUT|||||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

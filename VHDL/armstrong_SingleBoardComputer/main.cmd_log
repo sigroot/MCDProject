@@ -1,0 +1,300 @@
+xst -intstyle ise -ifn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+taengine -intstyle ise -f main -w --format html1 -l main_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "C:/Users/samuelarmstrong/Desktop/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+xst -intstyle ise -ifn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.xst" -ofn "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc main.ucf -p xc9572xl-PC44-7 main.ngc main.ngd  
+cpldfit -intstyle ise -p xc9572xl-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper main.ngd 
+XSLTProcess main_build.xml 
+tsim -intstyle ise main main.nga 
+hprep6 -s IEEE1149 -n main -i main 

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\School\S6\MCD\SingleBoardComputer\armstrong_SingleBoardComputer\impact.xsl
+OUTFILE=D:\School\S6\MCD\SingleBoardComputer\armstrong_SingleBoardComputer\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=D:\School\S6\MCD\SingleBoardComputer\armstrong_SingleBoardComputer
+LICENSE=iMPACT
+USER_INFO=iMPACT

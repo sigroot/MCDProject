@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500xl" device="XC9572XL" pkg="PC44" spg="-7"/><pin dir="input" nm="CPU_LDS" no="1"/><pin dir="input" nm="CPU_R_W" no="37"/><pin dir="input" nm="CPU_UDS" no="2"/><pin dir="input" nm="CPU_AS" no="11"/><pin dir="input" nm="A&lt;20&gt;" no="26"/><pin dir="input" nm="A&lt;19&gt;" no="25"/><pin dir="input" nm="UTP_RXF" no="36"/><pin dir="input" nm="UTP_TXE" no="35"/><pin dir="input" nm="CLK" no="6"/><pin dir="input" nm="R_BTN" no="7"/><pin dir="input" nm="CPU_FC2" no="20"/><pin dir="input" nm="CPU_FC1" no="24"/><pin dir="input" nm="CPU_FC0" no="22"/><pin dir="output" nm="D0" no="39" sr="fast"/><pin dir="output" nm="CPU_IPL0" no="14" sr="fast"/><pin dir="output" nm="UTP_RD" no="28" sr="fast"/><pin dir="output" nm="CPU_DTACK" no="9" sr="fast"/><pin dir="output" nm="RAM_WE" no="4" sr="fast"/><pin dir="output" nm="RAM_OE" no="3" sr="fast"/><pin dir="output" nm="RAM_CE" no="5" sr="fast"/><pin dir="output" nm="CPU_RST" no="19" sr="fast"/><pin dir="output" nm="CPU_HALT" no="18" sr="fast"/><pin dir="output" nm="ROM_0_OE" no="42" sr="fast"/><pin dir="output" nm="ROM_0_CE" no="44" sr="fast"/><pin dir="output" nm="ROM_1_OE" no="40" sr="fast"/><pin dir="output" nm="ROM_1_CE" no="43" sr="fast"/><pin dir="output" nm="UTP_WR" no="27" sr="fast"/><pin dir="output" nm="UTP_SIWU" no="38" sr="fast"/><pin dir="output" nm="UTP_RST" no="29" sr="fast"/><pin dir="output" nm="C_EN" no="8" sr="fast"/><pin dir="output" nm="CPU_IPL2" no="12" sr="fast"/><pin dir="output" nm="CPU_IPL1" no="13" sr="fast"/></ibis>

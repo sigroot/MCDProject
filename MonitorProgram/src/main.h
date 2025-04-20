@@ -120,7 +120,7 @@ char* main_menu = "\
                                                                                 \r\n\
                              Available Commmands:                               \r\n\
                                                                                 \r\n\
-         * ReadM [address] [count]  - Read [count] (def: 1) bytes from [address]\r\n\
+         * ReadM [address] [count]  - Read [count] (def: 1) longs from [address]\r\n\
          * WritM [address] [value]  - Write [value] to the byte at [address]    \r\n\
          * ReadR [register]         - Read the value in [register]              \r\n\
          * WritR [register] [value] - Write [value] to [register]               \r\n\

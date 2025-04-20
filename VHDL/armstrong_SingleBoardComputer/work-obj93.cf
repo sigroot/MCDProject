@@ -1,0 +1,4 @@
+v 4
+file . "main.vhd" "6ad8e8b755f71174d478ce01c0df8ec8cb1f034f" "20250226012542.152":
+  entity main at 20( 649) + 0 on 19;
+  architecture behavioral of main at 68( 2393) + 0 on 20;

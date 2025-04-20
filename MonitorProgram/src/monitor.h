@@ -36,10 +36,10 @@ int interface() {
     }
     // Next blank byte
     uint8_t buff_tail = 0;
+    print_str(main_menu);
+    print_str(buffer);
     while(1){
         // Print menu and saved buffer
-        print_str(main_menu);
-        print_str(buffer);
 
         // Get user input
         input = b_poll();
@@ -51,20 +51,30 @@ int interface() {
                 p_nl();
                 parse_buf(buffer, buff_tail);
                 buff_clear(buffer, &buff_tail);
+                // Reprint Screen
+                print_str(main_menu);
+                print_str(buffer);
                 break;
             case '\r': // Push command
                 p_nl();
                 parse_buf(buffer, buff_tail);
                 buff_clear(buffer, &buff_tail);
+                // Reprint Screen
+                print_str(main_menu);
+                print_str(buffer);
                 break;
             case 0x7F: // Delete last character
                 if (buff_tail <= 0) break;
                 buff_tail -= 1;
                 buffer[buff_tail] = '\0';
+                // Remove last character
+                print_str("\b \b");
                 break;
             default: // Add character
                 if (buff_tail > buffer_len) break;
                 buffer[buff_tail] = input; 
+                // Print new character
+                print_char(buffer[buff_tail]);
                 buff_tail += 1;
                 break;
         }
@@ -87,9 +97,9 @@ int parse_buf(char* buffer, uint8_t buffer_tail) {
     __asm("moveml %a0-%a7/%d0-%d7, -(%SP)");
 
     // Parse Buffer
-    uint8_t comm_len = 6;
+    uint8_t comm_len = 5;
     uint8_t total_comm = 6;
-    char* commands[6] = {"ReadM ", "WritM ", "ReadR ", "WritR ", "LSRec ", "RunSR "};
+    char* commands[6] = {"ReadM", "WritM", "ReadR", "WritR", "LSRec", "RunSR"};
 
     if (buffer_tail < comm_len) {
         print_nl("Command too short\n\rPress any key...");
@@ -162,14 +172,14 @@ int read_memory(char* buffer, uint8_t buff_tail){
     parameter_buff[8] = 0;
     uint32_t* address = (uint32_t*) shtod(parameter_buff);
     uint32_t count = 1;
-    if (buff_tail >= 23) {
+    if (buff_tail > 15) {
         count = shtod(buffer+15);
     }
     for(int i = 0; i < count; i++) {
         print_str("Address ");
-        print_long((uint32_t) address + i);
+        print_long((uint32_t) address + i*4);
         print_str(" : ");
-        print_long(*(address+4));
+        print_long(*(address+i));
         p_nl();
     }
     return 0;
@@ -208,6 +218,7 @@ int read_register(char* buffer, uint8_t buff_tail) {
             print_long(((uint32_t*) (storage-64))[i]);
             p_nl();
         }
+        return 0;
     }
 
     uint8_t index = 0;
@@ -263,7 +274,6 @@ int write_register(char* buffer, uint8_t buff_tail) {
 }
 
 int parse_srecord() {
-    char newline = 0xA;
     print_nl("Please enter 1 S-Record per line");
     uint32_t total_lines = 0;
     uint8_t type = 0;
@@ -275,6 +285,7 @@ int parse_srecord() {
     while (1) {
         // Start SRec
         while(b_poll() != 'S');
+        print_char('S'); // Echo
         checksum = 0;
         total_lines += 1;
         // Get type
@@ -283,8 +294,14 @@ int parse_srecord() {
             print_nl("Type error!");
             return 1;
         }
+        print_char(type); // Echo
         type &= 0xF;
-        if (type == 0) while (b_poll() != newline);
+        // Ignore S0
+        if (type == 0) {
+            while (b_poll() > 0x1F);
+            p_nl();
+            continue;
+        }
         // Get count
         buffer[0] = b_poll();
         buffer[1] = b_poll();
@@ -294,6 +311,7 @@ int parse_srecord() {
             print_nl("Count error!");
             return 1;
         }
+        print_str(buffer); // Echo
         checksum += count;
         // Get address
         if (type < 4){
@@ -308,17 +326,22 @@ int parse_srecord() {
             count -= 11 - type;
         }
         buffer[8] = 0;
+        print_str(buffer); // Echo
         address = (uint8_t*) shtod(buffer);
         if ((uint32_t) address < 0x00080010 || (uint32_t) address > 0x000A0000) {
             print_nl("Address Error");
             return 1;
         }
         checksum += (uint32_t) address;
+        checksum += ((uint32_t) address) >> 8;
+        checksum += ((uint32_t) address) >> 16;
+        checksum += ((uint32_t) address) >> 24;
         // Write data
         buffer[2] = 0;
         for ( ; count > 1; count--) {
             buffer[0] = b_poll();
             buffer[1] = b_poll();
+            print_str(buffer); // Echo
             data = (uint8_t) shtod(buffer); 
             checksum += data;
             *address = data;
@@ -327,11 +350,15 @@ int parse_srecord() {
         // Check Checksum
         buffer[0] = b_poll();
         buffer[1] = b_poll();
-        if (~checksum != (uint8_t) shtod(buffer)) {
+        print_nl(buffer); // Echo
+        if (((~checksum) & 0xFF) != ((uint8_t) shtod(buffer))) {
             print_nl("Checksum Error!");
+            print_hex(~checksum);
+            print_str(" ");
+            print_hex((uint8_t) shtod (buffer));
             return 1;
         }
-        p_nl();
+        // End loading
         if (type > 6) {
             print_nl("Recieved S-Record");
             print_str("Recieved 0x");

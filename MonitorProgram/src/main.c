@@ -1,4 +1,4 @@
-// Test main
+// Board main
 // Written by sigroot
 
 #ifndef stdint

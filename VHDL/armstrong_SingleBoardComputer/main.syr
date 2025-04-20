@@ -1,0 +1,246 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.vhd" in Library work.
+Entity <main> compiled.
+Entity <main> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.vhd" line 279: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <R_BTN>
+Entity <main> analyzed. Unit <main> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <main>.
+    Related source file is "D:/School/S6/MCD/SingleBoardComputer/armstrong_SingleBoardComputer/main.vhd".
+WARNING:Xst:2565 - Inout <UTP_CBUS5> is never assigned.
+WARNING:Xst:2565 - Inout <UTP_CBUS6> is never assigned.
+    Found 4x4-bit ROM for signal <HI_PS$rom0000>.
+    Found 4x2-bit ROM for signal <WC_NS$mux0001>.
+WARNING:Xst:737 - Found 2-bit latch for signal <HI_NS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 2-bit latch for signal <RD_NS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 2-bit latch for signal <RC_NS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 2-bit latch for signal <WC_NS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit tristate buffer for signal <RAM_OE>.
+    Found 1-bit tristate buffer for signal <RAM_WE>.
+    Found 1-bit tristate buffer for signal <RAM_CE>.
+    Found 1-bit tristate buffer for signal <D0>.
+    Found 2-bit register for signal <HI_PS>.
+    Found 2-bit register for signal <RC_PS>.
+    Found 2-bit register for signal <RD_PS>.
+    Found 2-bit register for signal <WC_PS>.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   4 Tristate(s).
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 4x2-bit ROM                                           : 1
+ 4x4-bit ROM                                           : 1
+# Registers                                            : 4
+ 2-bit register                                        : 4
+# Latches                                              : 4
+ 2-bit latch                                           : 4
+# Tristates                                            : 4
+ 1-bit tristate buffer                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 4x2-bit ROM                                           : 1
+ 4x4-bit ROM                                           : 1
+# Latches                                              : 4
+ 2-bit latch                                           : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <RC_NS_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RD_NS_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RC_PS_1> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RD_PS_1> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <main> ...
+  implementation constraint: INIT=r	 : HI_PS_1
+  implementation constraint: INIT=r	 : WC_PS_0
+  implementation constraint: INIT=r	 : RC_PS_0
+  implementation constraint: INIT=r	 : WC_PS_1
+  implementation constraint: INIT=r	 : HI_PS_0
+  implementation constraint: INIT=r	 : RD_PS_0
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 34
+
+Cell Usage :
+# BELS                             : 136
+#      AND2                        : 28
+#      AND3                        : 8
+#      AND4                        : 2
+#      AND5                        : 4
+#      AND7                        : 2
+#      GND                         : 1
+#      INV                         : 73
+#      OR2                         : 15
+#      OR3                         : 1
+#      VCC                         : 1
+#      XOR2                        : 1
+# FlipFlops/Latches                : 12
+#      FD                          : 6
+#      LD                          : 6
+# IO Buffers                       : 32
+#      IBUF                        : 13
+#      OBUF                        : 15
+#      OBUFE                       : 4
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.20 secs
+ 
+--> 
+
+Total memory usage is 4497732 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

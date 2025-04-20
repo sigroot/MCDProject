@@ -1,0 +1,178 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$3_INV$138 <= (NOT HI_PS(0) AND HI_PS(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$5_INV$139 <= (NOT CPU_AS AND NOT UTP_TXE);
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$6 <= ((NOT HI_PS(0) AND HI_PS(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CPU_R_W AND NOT CPU_AS AND A(20) AND NOT A(19)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CPU_DTACK <= ((CPU_LDS AND CPU_AS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CPU_AS AND NOT RC_PS(0) AND NOT RD_PS(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CPU_HALT <= R_BTN;
+</td></tr><tr><td>
+</td></tr><tr><td>
+CPU_IPL0 <= NOT (HI_PS(0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CPU_IPL0 <= NOT (HI_PS(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CPU_IPL1 <= '1';
+</td></tr><tr><td>
+</td></tr><tr><td>
+CPU_IPL2 <= '1';
+</td></tr><tr><td>
+</td></tr><tr><td>
+CPU_RST <= R_BTN;
+</td></tr><tr><td>
+</td></tr><tr><td>
+C_EN <= '1';
+</td></tr><tr><td>
+</td></tr><tr><td>
+D0_I <= UTP_RXF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D0 <= D0_I when D0_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D0_OE <= (NOT CPU_LDS AND RC_PS(0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+HI_NS(0)/HI_NS(0)_RSTF <= ((HI_PS(0) AND HI_PS(1) AND NOT R_BTN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HI_PS(0) AND HI_PS(1) AND NOT WC_PS(1) AND WC_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CPU_LDS AND NOT CPU_AS AND HI_PS(0) AND NOT HI_PS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CPU_FC2 AND CPU_FC1 AND CPU_FC0));
+</td></tr><tr><td>
+FDCPE_HI_NS0: FDCPE port map (HI_NS(0),'0','0',HI_NS(0)/HI_NS(0)_RSTF,HI_NS(0)/HI_NS(0)_SETF);
+</td></tr><tr><td>
+</td></tr><tr><td>
+HI_NS(0)/HI_NS(0)_SETF <= ((NOT UTP_RXF AND NOT HI_PS(0) AND NOT HI_PS(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CPU_LDS AND CPU_AS AND NOT HI_PS(0) AND HI_PS(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+HI_NS(1)/HI_NS(1)_RSTF <= ((NOT UTP_RXF AND NOT HI_PS(0) AND NOT HI_PS(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HI_PS(0) AND HI_PS(1) AND NOT R_BTN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HI_PS(0) AND HI_PS(1) AND NOT WC_PS(1) AND WC_PS(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+HI_NS(1)/HI_NS(1)_SETF <= ((CPU_LDS AND CPU_AS AND NOT HI_PS(0) AND HI_PS(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CPU_LDS AND NOT CPU_AS AND HI_PS(0) AND NOT HI_PS(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CPU_FC2 AND CPU_FC1 AND CPU_FC0));
+</td></tr><tr><td>
+FDCPE_HI_NS1: FDCPE port map (HI_NS(1),'0','0',HI_NS(1)/HI_NS(1)_RSTF,HI_NS(1)/HI_NS(1)_SETF);
+</td></tr><tr><td>
+FDCPE_HI_PS0: FDCPE port map (HI_PS(0),HI_NS(0),CLK,'0','0');
+</td></tr><tr><td>
+FDCPE_HI_PS1: FDCPE port map (HI_PS(1),HI_NS(1),CLK,'0','0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+RAM_CE_I <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAM_CE <= RAM_CE_I when RAM_CE_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAM_CE_OE <= (NOT CPU_AS AND NOT A(20) AND A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$3_INV$138);
+</td></tr><tr><td>
+</td></tr><tr><td>
+RAM_OE_I <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAM_OE <= RAM_OE_I when RAM_OE_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAM_OE_OE <= (NOT CPU_AS AND NOT A(20) AND A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$3_INV$138);
+</td></tr><tr><td>
+</td></tr><tr><td>
+RAM_WE_I <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAM_WE <= RAM_WE_I when RAM_WE_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAM_WE_OE <= NOT CPU_R_W;
+</td></tr><tr><td>
+FDCPE_RC_NS0: FDCPE port map (RC_NS(0),'0','0',RC_NS_CLR(0),RC_NS_PRE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RC_NS_CLR(0) <= (CPU_LDS AND RC_PS(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RC_NS_PRE(0) <= (NOT CPU_LDS AND CPU_R_W AND NOT CPU_AS AND A(20) AND A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RC_PS(0) AND NOT $OpTx$$OpTx$FX_DC$3_INV$138);
+</td></tr><tr><td>
+FDCPE_RC_PS0: FDCPE port map (RC_PS(0),RC_NS(0),CLK,'0','0');
+</td></tr><tr><td>
+FDCPE_RD_NS0: FDCPE port map (RD_NS(0),'0','0',RD_NS_CLR(0),RD_NS_PRE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD_NS_CLR(0) <= (CPU_LDS AND RD_PS(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD_NS_PRE(0) <= (NOT UTP_RXF AND NOT RD_PS(0) AND $OpTx$FX_DC$6);
+</td></tr><tr><td>
+FDCPE_RD_PS0: FDCPE port map (RD_PS(0),RD_NS(0),CLK,'0','0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+ROM_0_CE <= NOT (((CPU_R_W AND NOT CPU_UDS AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HI_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CPU_R_W AND NOT CPU_UDS AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HI_PS(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ROM_0_OE <= NOT (((CPU_R_W AND NOT CPU_UDS AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HI_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CPU_R_W AND NOT CPU_UDS AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HI_PS(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ROM_1_CE <= NOT (((NOT CPU_LDS AND CPU_R_W AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HI_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CPU_LDS AND CPU_R_W AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HI_PS(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ROM_1_OE <= NOT (((NOT CPU_LDS AND CPU_R_W AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HI_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CPU_LDS AND CPU_R_W AND NOT CPU_AS AND NOT A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HI_PS(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UTP_RD <= NOT ((NOT CPU_LDS AND RD_PS(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+UTP_RST <= '1';
+</td></tr><tr><td>
+</td></tr><tr><td>
+UTP_SIWU <= '1';
+</td></tr><tr><td>
+</td></tr><tr><td>
+UTP_WR <= NOT ((NOT WC_PS(1) AND WC_PS(0)));
+</td></tr><tr><td>
+FDCPE_WC_NS0: FDCPE port map (WC_NS(0),'0','0',NOT WC_NS(0)/WC_NS(0)_RSTF__$INT,WC_NS_PRE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WC_NS_PRE(0) <= (NOT CPU_LDS AND NOT CPU_R_W AND NOT CPU_AS AND A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UTP_TXE AND NOT WC_PS(1) AND NOT WC_PS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$3_INV$138);
+</td></tr><tr><td>
+</td></tr><tr><td>
+WC_NS(0)/WC_NS(0)_RSTF__$INT <= ((NOT CPU_AS AND NOT WC_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT WC_PS(1) AND NOT WC_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CPU_AS AND NOT UTP_TXE AND NOT WC_PS(1)));
+</td></tr><tr><td>
+FDCPE_WC_NS1: FDCPE port map (WC_NS(1),'0','0',WC_NS(1)/WC_NS(1)_RSTF,WC_NS_PRE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WC_NS_PRE(1) <= (NOT WC_PS(1) AND WC_PS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$5_INV$139);
+</td></tr><tr><td>
+</td></tr><tr><td>
+WC_NS(1)/WC_NS(1)_RSTF <= ((CPU_AS AND WC_PS(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (WC_PS(1) AND WC_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CPU_LDS AND NOT CPU_R_W AND NOT CPU_AS AND A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UTP_TXE AND HI_PS(0) AND NOT WC_PS(1) AND NOT WC_PS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CPU_LDS AND NOT CPU_R_W AND NOT CPU_AS AND A(20) AND NOT A(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT UTP_TXE AND NOT HI_PS(1) AND NOT WC_PS(1) AND NOT WC_PS(0)));
+</td></tr><tr><td>
+FDCPE_WC_PS0: FDCPE port map (WC_PS(0),WC_NS(0),CLK,'0','0');
+</td></tr><tr><td>
+FDCPE_WC_PS1: FDCPE port map (WC_PS(1),WC_NS(1),CLK,'0','0');
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

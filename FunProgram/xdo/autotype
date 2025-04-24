@@ -1,0 +1,2 @@
+#!/bin/bash
+xdotool windowfocus --sync `xdotool search --name "/dev/ttyUSB0 - PuTTY" | tail -n 1`; xdotool type `cat output/main.S68`

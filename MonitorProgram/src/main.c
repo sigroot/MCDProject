@@ -18,6 +18,8 @@
 #include "monitor.h"
 #endif
 
+// linker file sections
+
 extern uint32_t start_text;
 extern uint32_t end_text;
 extern uint32_t start_rodata;

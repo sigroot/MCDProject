@@ -19,4 +19,3 @@
 uint8_t* utp = (uint8_t*) 0x00100001;
 uint8_t* poll = (uint8_t*) 0x00180001;
 uint32_t storage = 0x00000000;
-uint32_t random;

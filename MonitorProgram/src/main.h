@@ -47,11 +47,13 @@ int print_hex(uint8_t phex) {
     uint8_t first = (phex & 0xF0) >> 4;
     uint8_t second = (phex & 0x0F);
 
+    // Convert high nibble to hex
     if (first > 9) {
         first -= 9;
         first |= 0x40;
     } else first |= 0x30;
 
+    // Convert low nibble to hex
     if (second > 9) {
         second -= 9;
         second |= 0x40;
@@ -87,10 +89,13 @@ char b_poll() {
 //      Conversion functions
 //          ***
 
+// Convert a null-terminated inputted string (in hex) to a 32 bit integer
 uint32_t shtod(char* input) {
     uint32_t output = 0;
     for (int i = 0; input[i] != '\0'; i++) {
+        // Free 4 low bits for a new value
         output <<= 4;
+        // Convert ascii and add to output
         if (input[i] >= 0x30 && input[i] <= 0x39) {
             output += input[i] & 0x0F;
         } else if ((input[i] >= 0x41 && input[i] <= 0x46) || (input[i] >= 0x61 && input[i] <= 0x66)) {
